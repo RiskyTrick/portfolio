@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="kbn-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+      <animate attributeName="x1" values="0%;20%;0%" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="0%;30%;0%" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="kbn-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle with subtle glow -->
+  <circle cx="32" cy="32" r="30" fill="#f0f4f8" stroke="url(#kbn-grad)" stroke-width="2">
+    <animate attributeName="stroke-width" values="2;3;2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Glow ring -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="url(#kbn-glow)" stroke-width="1" opacity="0.5">
+    <animate attributeName="r" values="28;29;28" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- KBN Text -->
+  <text x="32" y="38" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="900" letter-spacing="-1" fill="url(#kbn-grad)">
+    KBN
+    <animate attributeName="opacity" values="0;1" dur="0.6s" fill="freeze"/>
+  </text>
+  <!-- Subtle orbiting dot -->
+  <circle cx="32" cy="5" r="1.5" fill="#0ea5e9" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="32" cy="59" r="1" fill="#8b5cf6" opacity="0.4">
+    <animateTransform attributeName="transform" type="rotate" from="180 32 32" to="540 32 32" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>
